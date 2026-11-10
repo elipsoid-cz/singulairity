@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Singulairity</title>
+  <meta name="description" content="An incremental game about accelerating progress, from the first spark of language to the singularity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Silkscreen&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Singulairity">
+  <meta property="og:description" content="An incremental game about how fast progress accelerates, from the first idea to the AI singularity.">
+  <meta property="og:url" content="https://elipsoid-cz.github.io/singulairity/">
+  <meta property="og:image" content="https://elipsoid-cz.github.io/singulairity/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-era="1">
+  <header class="top">
+    <h1 class="title" aria-label="Singulairity">Singul<span class="title-ai">ai</span>rity</h1>
+    <div id="hud" class="hud"></div>
+  </header>
+
+  <div id="challenge" class="challenge" hidden></div>
+  <main class="layout">
+    <section class="col col-left">
+      <button id="think" class="think" type="button">Have an idea</button>
+      <div id="panels"></div>
+    </section>
+
+    <section class="col col-mid">
+      <div class="scene-wrap"><canvas id="scene" width="64" height="36" aria-label="The world"></canvas></div>
+      <div id="ticker" class="ticker" aria-live="off"></div>
+      <ol id="log" class="log" aria-live="polite"></ol>
+    </section>
+
+    <section class="col col-right">
+      <h2 class="section-title">Discoveries</h2>
+      <div id="shop" class="shop"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <button id="share-game" class="link" type="button">Share the game</button>
+    <button id="reset" class="link" type="button">Reset game</button>
+    <span class="foot-note">Inspired by Frank Lantz's <a href="https://www.decisionproblem.com/paperclips/" target="_blank" rel="noopener">Universal Paperclips</a> and Tim Urban's <a href="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html" target="_blank" rel="noopener">"The AI Revolution"</a> on Wait But Why.</span>
+  </footer>
+
+  <div id="modal" class="modal" hidden></div>
+  <div id="ending" class="ending" hidden></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
